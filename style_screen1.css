@@ -1,0 +1,75 @@
+body {
+  margin: auto;
+  font-family: sans-serif;
+  padding-bottom: 30px;
+}
+
+header {
+  height: 80px;
+}
+
+#imgHeader {
+  align-content: center;
+  background: url(images/background.jpg) 100% no-repeat;
+  width: 700px;
+  height: 425px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+#txtAuthor {
+}
+
+#bgTextHeader {
+  background-color: white;
+  align-items: center;
+}
+
+h3 {
+  font-family: serif;
+  max-width: 75%;
+  padding: 10px;
+  text-align: center;
+}
+
+#head {
+  height: 80;
+}
+
+#txtHead {
+  color: rgb(255, 0, 0);
+}
+
+#bgStartQuiz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  padding-bottom: 10px;
+}
+
+#bgBtnStart {
+  padding: 5px;
+  background-color: #2196f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+}
+
+button:hover {
+  background-color: white;
+}
+
+#icNextStart {
+  margin-left: 5px;
+}
+
+#tagA{
+  text-decoration: none;
+
+}
