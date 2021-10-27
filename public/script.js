@@ -111,11 +111,13 @@ function onSubmit(event) {
     dialog.showModal()
 
     document.querySelector('#btnCancel').onclick = function () {
+        event.preventDefault()
         // document.body.style.overflow = 'auto';
         dialog.close()
     }
 
     document.querySelector('#btnConfirm').onclick = function () {
+        event.preventDefault()
         // document.body.style.overflow = 'auto';
         dialog.close()
 
@@ -124,7 +126,7 @@ function onSubmit(event) {
         page2.style.display = "none";
 
         // Link Post
-        const linkPost = url + _data._id + "/submit"
+        const linkPost = "/attempts/" + _data._id + "/submit"
 
         var x = document.getElementsByName("res1").value;
         let listQuiz = _data.questions
@@ -159,6 +161,7 @@ function onSubmit(event) {
         }).then((res) => res.json())
             .then(res => {
 
+                console.log(res)
                 /**
                  * Set Questions
                  */
@@ -239,9 +242,8 @@ function onSubmit(event) {
                             const tagWrong = ansDiv.getElementsByClassName("ans_quiz_box_contain_input_wrong")[0]
                             tagWrong.style.display = "block"
 
-
                             const circleInput = ansDiv.getElementsByClassName("ans_quiz_box_contain_input_circle")[0]
-                            circleInput.style.groundColor = "#000000"
+                            circleInput.style.backgroundColor = "#000000"
 
                             // Change correct Answer
                             const ansCorrectQuiz = parseInt(correctAns[question._id])
